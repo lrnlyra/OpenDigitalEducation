@@ -1,0 +1,294 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header space-between">
+        <div class="header-left">
+          <i class="fas fa-bars"></i> <span>CLG-EMILE CHEVALLIER-ac-CRETEIL</span>
+        </div>
+        <div class="header-right">
+          <i class="fas fa-home"></i> <i class="far fa-user active"></i>
+          <i class="fas fa-users"></i> <i class="fas fa-th"></i>
+          <i class="fas fa-exclamation-triangle"></i>
+          <i class="fas fa-power-off"></i>
+        </div>
+      </header>
+      <div class="main padding10">
+        <div class="menu space-between">
+          <div class="menu-left">
+            <i class="far fa-user"></i> <span>Utilisateurs</span>
+          </div>
+          <div class="menu-right">
+            Créer un utilisateur <i class="fas fa-user-plus"></i>
+          </div>
+        </div>
+        <div class="content space-between">
+          <aside class="sidebar shadowed-bg">
+            <div class="sidebar-search space-between">
+              <div class="sidebar-search-input">
+                <input type="text" placeholder="Rechercher un utilisateur" /> <i class="fas fa-search"></i>
+              </div>
+              <span>Filtres <i class="fas fa-angle-right"></i></span>
+            </div>
+            <div class="sidebar-filters padding10 space-between">
+                <i class="fas fa-sort-alpha-down"></i>
+                <i class="fas fa-sort-amount-down"></i>
+                <div class="button lightgrey">
+                  <span class="centered">Tout sélectionner</span>
+                </div>
+                <div class="button lightgrey">
+                  <span class="centered">Multi-sélection</span>
+                  <i class="fas fa-mouse-pointer"></i>
+                </div>
+            </div>
+            <div class="sidebar-items" id="sidebarItems">
+            </div>
+          </aside>
+          <div class="person shadowed-bg" id="person">
+            <div class="person-title space-between">
+              <span></span> <i class="fas fa-times"></i>
+            </div>
+            <div class="person-doublon">
+              <span>Compte en doublon</span>
+              <div class="person-doublon-handle">
+                <span class="person-doublon-handle-button">
+                  <span>Gérer le doublon</span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+              </div>
+            </div>
+            <div class="person-account space-between padding10">
+              <div class="person-account-left space-between">
+                <i class="far fa-image person-account-left-image"></i>
+                <div class="button medgrey margin-top5">
+                  <span>Bloquer le compte</span>
+                  <i class="fas fa-hand-paper"></i>
+                </div>
+                <div class="button medgrey margin-top5">
+                  <span>Supprimer le compte</span> <i class="fas fa-trash"></i>
+                </div>
+              </div>
+              <div class="person-account-right space-between">
+                <div class="person-account-right-button space-between">
+                  <span>Règle de communication de l'utilisateur</span>
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="person-account-right-button space-between">
+                  <span>Droits applicatifs du groupe</span>
+                  <i class="fas fa-th"></i>
+                </div>
+              </div>
+            </div>
+            <div class="person-infos" id="person-infos">
+              <div class="person-item-header">Connexion et infos ENT</div>
+              <div class="person-infos-content space-between padding10">
+                <div class="person-infos-content-left">
+                  <div class="person-infos-content-left-item">
+                    <span class="person-infos-content-left-item-title">
+                      Profil
+                    </span>
+                    <span class="person-infos-content-left-item-data" id="infos-profil"></span>
+                  </div>
+                  <div class="person-infos-content-left-item margin-top10">
+                    <span class="person-infos-content-left-item-title">
+                      Login
+                    </span>
+                    <span class="person-infos-content-left-item-data" id="infos-login"></span>
+                  </div>
+                  <div class="person-infos-content-left-item margin-top10">
+                    <span class="person-infos-content-left-item-title">
+                      Code d'activation
+                    </span>
+                    <span class="person-infos-content-left-item-data" id="infos-code"></span>
+                  </div>
+                  <div class="person-infos-content-left-item margin-top10">
+                    <span class="person-infos-content-left-item-title">
+                      Identifiant
+                    </span>
+                    <span class="person-infos-content-left-item-data" id="infos-id"></span>
+                  </div>
+                  <div class="person-infos-content-left-item margin-top10">
+                    <span class="person-infos-content-left-item-title">
+                      Source
+                    </span>
+                    <span class="person-infos-content-left-item-data" id="infos-source"></span>
+                  </div>
+                  <div class="person-infos-content-left-item margin-top10">
+                    <span class="person-infos-content-left-item-title" id="infos-admin">
+                      Administration
+                    </span>
+                    <span class="person-infos-content-left-item-data"
+                      ></span
+                    >
+                  </div>
+                  <div class="button lightgrey margin-top15">
+                    <span
+                      >Envoyer un mail de réinitialisation de mot de passe</span
+                    >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+                <div class="person-infos-content-right space-between">
+                  <div class="person-infos-content-right-top">
+                    <div class="button lightgrey margin-top5">
+                      <span class="centered">Modifier le profil</span>
+                    </div>
+                    <div class="button lightgrey margin-top5">
+                      <span class="centered">Changer le login</span>
+                    </div>
+                    <div class="button lightgrey margin-top5">
+                      <span class="centered">Changer le code d'activation</span>
+                    </div>
+                  </div>
+                  <div class="person-infos-content-right-bot">
+                    <div class="button lightgrey margin-top5">
+                      <span class="centered"
+                        >Retirer droit d'ADML pour cet établissement</span
+                      >
+                    </div>
+                    <input class="input-text margin-top5" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="person-admin" id="person-admin">
+              <div class="person-item-header">Information administratives</div>
+              <div class="person-admin-content space-between padding10">
+                <div class="person-admin-content-left">
+                    <div class="person-admin-content-left-item">
+                      <span class="person-admin-content-left-item-title">
+                        Prénom
+                      </span>
+                      <input class="input-text" type="text" id="admin-firstName" />
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        Nom
+                      </span>
+                      <input class="input-text" type="text" id="admin-lastName" />
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        Nom d'affichage
+                      </span>
+                      <input class="input-text" type="text" id="admin-displayName" />
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        Date de naissance
+                      </span>
+                      <input class="input-text" type="text" id="admin-birthDate" />
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        Adresse
+                      </span>
+                      <input class="input-text" type="text" id="admin-address" />
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        CP
+                      </span>
+                      <input class="input-text" type="text" id="admin-zipCode" />
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        Ville
+                      </span>
+                      <input class="input-text" type="text"  id="admin-city"/>
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        Pays
+                      </span>
+                      <input class="input-text" type="text" id="admin-country" />
+                    </div>
+                    <div class="person-admin-content-left-item margin-top5">
+                      <span class="person-admin-content-left-item-title">
+                        Adresse mail
+                      </span>
+                      <input class="input-text" type="text" id="admin-mail" />
+                    </div>
+                </div>
+                <div class="person-admin-content-right">
+                  <div class="button darkgrey">
+                    <span class="centered">Enregistrer les modifications</span>
+                  </div>
+                </div>
+              </div>
+            <div class="person-resp" id="person-resp">
+              <div class="person-item-header">Responsables</div>
+              <div class="person-resp-content padding10">
+                <div class="button lightgrey">
+                  <span>Ajouter un responsable</span>
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div id="resp-items"></div>
+              </div>
+            </div>
+            <div class="person-fonc" id="person-fonc">
+              <div class="person-item-header">Fonction(s) / Matière(s)</div>
+              <div class="person-fonc-content padding10">
+                <div class="button lightgrey">
+                  <span>Ajouter une matière</span>
+                  <i class="fas fa-user-plus"></i>
+                </div>
+                <div id="fonc-items"></div>
+              </div>
+            </div>
+            <div class="person-etab" id="person-etab">
+              <div class="person-item-header">Etablissement(s)</div>
+              <div class="person-etab-content padding10">
+                <div class="button lightgrey">
+                  <span>Ajouter un établissement</span>
+                  <i class="fas fa-building"></i>
+                </div>
+                <div id="etab-items"></div>
+              </div>
+            </div>
+            <div class="person-class" id="person-class">
+              <div class="person-item-header">Classe(s)</div>
+              <div class="person-class-content padding10">
+                <div class="button lightgrey">
+                  <span>Ajouter une classe</span>
+                  <i class="fas fa-users"></i>
+                </div>
+                <div id="class-items"></div>
+              </div>
+            </div>
+            <div class="person-group" id="person-group">
+              <div class="person-item-header">Groupe(s) d'enseignement</div>
+              <div class="person-group-content padding10">
+                <div class="button lightgrey">
+                  <span>Ajouter un groupe</span>
+                  <i class="fas fa-user-plus"></i>
+                </div>
+                <div id="group-items"></div>
+              </div>
+            </div>
+            <div class="person-ent" id="person-ent">
+              <div class="person-item-header">Groupe(s) ENT</div>
+              <div class="person-ent-content padding10">
+                <div class="button lightgrey">
+                  <span>Ajouter un groupe</span>
+                  <i class="fas fa-user-plus"></i>
+                </div>
+                <div id="ent-items"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+  font-size: 0.9rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.padding10 {
+  padding: 1rem;
+}
+
+.margin-top5 {
+  margin-top: 0.5rem;
+}
+
+.margin-top10 {
+  margin-top: 1rem;
+}
+
+.margin-top15 {
+  margin-top: 1.5rem;
+}
+
+.input-text {
+  border: 1px solid #000;
+  width: 100%;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+.button span {
+  font-size: 0.7rem;
+  color: #fc6632;
+  padding-right: 0.5rem;
+}
+.button span.centered {
+  margin: 0 auto;
+}
+.button.medgrey {
+  background-color: #ebebeb;
+}
+.button.medgrey:hover {
+  background-color: #ddd;
+}
+.button.lightgrey {
+  background-color: #f6f6f6;
+}
+.button.lightgrey:hover {
+  background-color: #eee;
+}
+.button.darkgrey {
+  background-color: #c0c0c0;
+}
+.button.darkgrey span {
+  color: #000;
+}
+.button.darkgrey:hover {
+  background-color: #a0a0a0;
+}
+
+.removable-item {
+  width: 30%;
+}
+.removable-item span {
+  font-size: 0.7rem;
+}
+.removable-item i {
+  padding-left: 1rem;
+  cursor: pointer;
+}
+.removable-item i:hover {
+  color: #fc6632;
+}
+
+.container .header {
+  align-items: center;
+  background-color: #22c8f6;
+  padding: 0.2rem 1rem;
+}
+.container .header i {
+  font-size: 1.1rem;
+}
+.container .header i:hover {
+  color: #f36c33;
+  cursor: pointer;
+}
+.container .header i.active {
+  color: #f36c33;
+  background-color: #69daf5;
+  border-radius: 4px;
+}
+.container .header i.active:hover {
+  color: #1aa5d1;
+}
+.container .header-left {
+  display: flex;
+  align-items: center;
+}
+.container .header-left span {
+  padding-left: 1rem;
+}
+.container .header-right i {
+  padding: 0.3rem 0.4rem;
+}
+.container .main .menu {
+  margin-bottom: 1rem;
+}
+.container .main .menu-left span {
+  font-size: 1.1rem;
+  color: #1f8db0;
+  padding-left: 0.4rem;
+}
+.container .main .menu-left i {
+  font-size: 1.1rem;
+}
+.container .main .menu-right {
+  background-color: #fc6632;
+  font-size: 0.7rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.container .main .menu-right:hover {
+  background-color: #e55120;
+}
+.container .main .menu-right i {
+  padding-left: 0.3rem;
+  font-size: 0.7rem;
+}
+.container .main .content .shadowed-bg {
+  box-shadow: 0 0 3px 0 #777;
+}
+.container .main .content .sidebar {
+  width: 33%;
+}
+.container .main .content .person {
+  width: 65%;
+}
+.container .main .content .person-title {
+  align-items: center;
+  padding: 1rem 1rem 0.7rem;
+}
+.container .main .content .person-title span {
+  color: #1aa5d1;
+}
+.container .main .content .person-title i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.container .main .content .person-title i:hover {
+  color: #fc6632;
+}
+.container .main .content .person-doublon {
+  background-color: #b51317;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .main .content .person-doublon span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 33%;
+}
+.container .main .content .person-doublon-handle {
+  width: 33%;
+}
+.container .main .content .person-doublon-handle-button {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+.container .main .content .person-doublon-handle-button:hover {
+  background-color: #fff3ef;
+}
+.container .main .content .person-doublon-handle-button span {
+  font-size: 0.7rem;
+  color: #fc6632;
+  padding-right: 0.5rem;
+}
+.container .main .content .person-doublon-handle-button i {
+  font-size: 0.6rem;
+  color: #000;
+}
+.container .main .content .person-account-left {
+  flex-direction: column;
+  width: 25%;
+}
+.container .main .content .person-account-left-image {
+  background-color: #e6e6e6;
+  width: 100%;
+  font-size: 6rem;
+  text-align: center;
+  color: #b3b3b3;
+}
+.container .main .content .person-account-right {
+  flex-direction: column;
+  width: 73%;
+}
+.container .main .content .person-account-right-button {
+  align-items: center;
+  background-color: #94e4fa;
+  border-radius: 4px;
+  padding: 1rem 0.7rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+.container .main .content .person-account-right-button:hover {
+  background-color: #22c8f6;
+}
+.container .main .content .person-account-right-button span {
+  font-weight: bold;
+}
+.container .main .content .person-account-right-button i {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.container .main .content .person-item-header {
+  background-color: #1aa5d1;
+  padding: 0.5rem;
+}
+.container .main .content .person-infos-content-left {
+  width: 55%;
+}
+.container .main .content .person-infos-content-left-item {
+  display: flex;
+}
+.container .main .content .person-infos-content-left-item span {
+  font-size: 0.7rem;
+}
+.container .main .content .person-infos-content-left-item-title {
+  width: 30%;
+  padding-right: 1rem;
+}
+.container .main .content .person-infos-content-right {
+  width: 42%;
+  flex-direction: column;
+}
+.container .main .content .person-infos-content-right-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.container .main .content .person-infos-content-right-top .button {
+  width: 11rem;
+}
+.container .main .content .person-admin-content-left {
+  width: 50%;
+}
+.container .main .content .person-admin-content-left-item {
+  display: flex;
+  align-items: center;
+}
+.container .main .content .person-admin-content-left-item span {
+  font-size: 0.7rem;
+}
+.container .main .content .person-admin-content-left-item-title {
+  width: 40%;
+  padding-right: 1rem;
+}
+.container .main .content .person-admin-content-right {
+  width: 40%;
+}
+.container .main .content .person-resp .button, .container .main .content .person-fonc .button, .container .main .content .person-etab .button, .container .main .content .person-class .button, .container .main .content .person-group .button, .container .main .content .person-ent .button {
+  margin-bottom: 1rem;
+}
+.container .main .content .person-resp .removable-item, .container .main .content .person-fonc .removable-item, .container .main .content .person-etab .removable-item, .container .main .content .person-class .removable-item, .container .main .content .person-group .removable-item, .container .main .content .person-ent .removable-item {
+  margin-top: 0.5rem;
+}
+.container .main .sidebar {
+  height: 80vh;
+  padding-top: 1rem;
+}
+.container .main .sidebar-search {
+  padding-left: 1rem;
+  align-items: center;
+}
+.container .main .sidebar-search-input {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.3rem;
+}
+.container .main .sidebar-search-input input {
+  border: none;
+  width: 9rem;
+  font-size: 0.7rem;
+}
+.container .main .sidebar-search span {
+  background-color: #1aa5d1;
+  padding: 0.5rem 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container .main .sidebar-search span:hover {
+  color: #fff;
+}
+.container .main .sidebar-filters {
+  align-items: center;
+}
+.container .main .sidebar-filters i {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.container .main .sidebar-filters i:first-child {
+  margin-left: 0;
+}
+.container .main .sidebar-filters i:hover {
+  color: #fc6632;
+}
+.container .main .sidebar-filters .button {
+  flex-grow: 1;
+  margin: 0 0 0 0.5rem;
+}
+.container .main .sidebar-filters .button i {
+  color: #fc6632;
+}
+.container .main .sidebar-items {
+  overflow: scroll;
+  height: 66vh;
+  border-top: 1px solid #ccc;
+}
+.container .main .sidebar-items-item {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+}
+.container .main .sidebar-items-item:hover {
+  background-color: #fff3ef;
+}
+.container .main .sidebar-items-item:hover span {
+  color: #fc6632;
+}
+.container .main .sidebar-items-item:hover i {
+  color: #fc6632;
+}
+.container .main .sidebar-items-item span {
+  font-size: 0.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */

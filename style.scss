@@ -1,0 +1,475 @@
+// Colors
+$light-blue: #94e4fa;
+$med-blue: #22c8f6;
+$dark-blue: #1aa5d1;
+$orange: #fc6632;
+
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+  font-size: 0.9rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+// Flex space-between
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Padding
+.padding10 {
+  padding: 1rem;
+}
+
+// Margin
+.margin-top5 {
+  margin-top: 0.5rem;
+}
+.margin-top10 {
+  margin-top: 1rem;
+}
+.margin-top15 {
+  margin-top: 1.5rem;
+}
+
+// Input
+.input-text {
+  border: 1px solid #000;
+  width: 100%;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+}
+
+// Buttons
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  padding: 0.4rem;
+  cursor: pointer;
+
+  // Text label
+  span {
+    font-size: 0.7rem;
+    color: $orange;
+    padding-right: 0.5rem;
+    &.centered {
+      margin: 0 auto;
+    }
+  }
+
+  // Medium grey background
+  &.medgrey {
+    background-color: #ebebeb;
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+  // Light grey background
+  &.lightgrey {
+    background-color: #f6f6f6;
+    &:hover {
+      background-color: #eee;
+    }
+  }
+  // Dark grey background
+  &.darkgrey {
+    background-color: #c0c0c0;
+    span {
+      color: #000;
+    }
+    &:hover {
+      background-color: #a0a0a0;
+    }
+  }
+}
+
+// Removable items
+.removable-item {
+  width: 30%;
+  & span {
+    font-size: 0.7rem;
+  }
+  & i {
+    padding-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.container {
+  // Header
+  .header {
+    align-items: center;
+    background-color: $med-blue;
+    padding: 0.2rem 1rem;
+
+    // Header icons
+    & i {
+      font-size: 1.1rem;
+      &:hover {
+        color: #f36c33;
+        cursor: pointer;
+      }
+    }
+    & i.active {
+      color: #f36c33;
+      background-color: #69daf5;
+      border-radius: 4px;
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+
+    // Header left content
+    &-left {
+      display: flex;
+      align-items: center;
+      & span {
+        padding-left: 1rem;
+      }
+    }
+
+    // Header right content (icons)
+    &-right {
+      i {
+        padding: 0.3rem 0.4rem;
+      }
+    }
+  }
+
+  // Main
+  .main {
+    // Menu top
+    .menu {
+      margin-bottom: 1rem;
+      // Menu left content
+      &-left {
+        & span {
+          font-size: 1.1rem;
+          color: #1f8db0;
+          padding-left: 0.4rem;
+        }
+        & i {
+          font-size: 1.1rem;
+        }
+      }
+      // Menu right content (button)
+      &-right {
+        background-color: $orange;
+        font-size: 0.7rem;
+        padding: 0.4rem;
+        cursor: pointer;
+        border-radius: 4px;
+        &:hover {
+          background-color: #e55120;
+        }
+
+        // Menu right icon
+        & i {
+          padding-left: 0.3rem;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    // Content
+    .content {
+      // Shadow background
+      .shadowed-bg {
+        box-shadow: 0 0 3px 0 #777;
+      }
+
+      // Sidebar
+      .sidebar {
+        width: 33%;
+      }
+
+      // Person content
+      .person {
+        width: 65%;
+
+        // Person title
+        &-title {
+          align-items: center;
+          padding: 1rem 1rem 0.7rem;
+
+          & span {
+            color: $dark-blue;
+          }
+          & i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+
+        // Doublon
+        &-doublon {
+          background-color: #b51317;
+          padding: 0.3rem 1rem;
+          text-align: center;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          // Doublon title text
+          & span {
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.8rem;
+            width: 33%;
+          }
+
+          // Doublon handle button
+          &-handle {
+            width: 33%;
+            &-button {
+              background-color: #fff;
+              border-radius: 4px;
+              padding: 0.2rem 0.4rem;
+              font-size: 0.6rem;
+              cursor: pointer;
+              &:hover {
+                background-color: #fff3ef;
+              }
+
+              // Doublon handle button text
+              & span {
+                font-size: 0.7rem;
+                color: $orange;
+                padding-right: 0.5rem;
+              }
+
+              // Doublon handle button icon
+              & i {
+                font-size: 0.6rem;
+                color: #000;
+              }
+            }
+          }
+        }
+
+        // Person account actions
+        &-account {
+          // Account left content
+          &-left {
+            flex-direction: column;
+            width: 25%;
+
+            // Account left image
+            &-image {
+              background-color: #e6e6e6;
+              width: 100%;
+              font-size: 6rem;
+              text-align: center;
+              color: #b3b3b3;
+            }
+          }
+
+          // Account right content
+          &-right {
+            flex-direction: column;
+            width: 73%;
+
+            // Account right buttons
+            &-button {
+              align-items: center;
+              background-color: $light-blue;
+              border-radius: 4px;
+              padding: 1rem 0.7rem;
+              margin: 0.5rem 0;
+              cursor: pointer;
+              &:hover {
+                background-color: $med-blue;
+              }
+
+              // Text
+              & span {
+                font-weight: bold;
+              }
+
+              // Icon
+              & i {
+                font-size: 1.5rem;
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+
+        // Person header bar for items
+        &-item-header {
+          background-color: $dark-blue;
+          padding: 0.5rem;
+        }
+
+        // Person infos
+        &-infos {
+          &-content {
+            // Person infos left content
+            &-left {
+              width: 55%;
+              &-item {
+                display: flex;
+                & span {
+                  font-size: 0.7rem;
+                }
+                &-title {
+                  width: 30%;
+                  padding-right: 1rem;
+                }
+              }
+            }
+
+            // Person infos right content
+            &-right {
+              width: 42%;
+              flex-direction: column;
+
+              // Top right content
+              &-top {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                & .button {
+                  width: 11rem;
+                }
+              }
+            }
+          }
+        }
+
+        // Admin infos
+        &-admin {
+          &-content {
+            // Admin infos left content
+            &-left {
+              width: 50%;
+              &-item {
+                display: flex;
+                align-items: center;
+                & span {
+                  font-size: 0.7rem;
+                }
+                &-title {
+                  width: 40%;
+                  padding-right: 1rem;
+                }
+              }
+            }
+            // Admin infos right content
+            &-right {
+              width: 40%;
+            }
+          }
+        }
+
+        // Other lists
+        &-resp,
+        &-fonc,
+        &-etab,
+        &-class,
+        &-group,
+        &-ent {
+          & .button {
+            margin-bottom: 1rem;
+          }
+          & .removable-item {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+
+    // Sidebar
+    .sidebar {
+      height: 80vh;
+      padding-top: 1rem;
+
+      // Search bar
+      &-search {
+        padding-left: 1rem;
+        align-items: center;
+        // Search input container
+        &-input {
+          border-bottom: 1px solid #000;
+          padding-bottom: 0.3rem;
+          & input {
+            border: none;
+            width: 9rem;
+            font-size: 0.7rem;
+          }
+        }
+        // Filters button
+        & span {
+          background-color: $dark-blue;
+          padding: 0.5rem 0.7rem;
+          font-weight: bold;
+          cursor: pointer;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      // Filters
+      &-filters {
+        align-items: center;
+        & i {
+          margin-left: 0.5rem;
+          cursor: pointer;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:hover {
+            color: $orange;
+          }
+        }
+        // Filter button
+        & .button {
+          flex-grow: 1;
+          margin: 0 0 0 0.5rem;
+          & i {
+            color: $orange;
+          }
+        }
+      }
+
+      // Sidebar items
+      &-items {
+        overflow: scroll;
+        height: 66vh;
+        border-top: 1px solid #ccc;
+        &-item {
+          padding: 0.5rem 1rem;
+          border-top: 1px solid #ccc;
+          cursor: pointer;
+          &:hover {
+            background-color: #fff3ef;
+            & span {
+              color: $orange;
+            }
+            & i {
+              color: $orange;
+            }
+          }
+          // Sidebar item text
+          & span {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}

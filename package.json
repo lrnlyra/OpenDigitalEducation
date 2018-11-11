@@ -1,0 +1,16 @@
+{
+  "name": "OpenDigitalEducation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "npx parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^1.10.2",
+    "sass": "^1.14.1"
+  }
+}

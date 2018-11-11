@@ -1,0 +1,150 @@
+{
+    "id": "dd922bd3-c8b3-4283-9300-deb05502c6fa",
+    "login": "jeremy.constanty",
+    "displayName": "CONSTANTY Jérémy",
+    "lastName": "CONSTANTY",
+    "firstName": "Jérémy",
+    "surname": "CONSTANTY",
+    "otherNames": [
+        "Jérémy"
+    ],
+    "birthDate": "2005-03-21",
+    "modified": "2018-07-02T14:53:14.300+02:00",
+    "attachmentId": "2619968",
+        "type": [
+        "Student"
+    ],
+    "fieldOfStudyLabels": [
+        "ARTS PLASTIQUES",
+        "ANGLAIS LV1",
+        "EDUCATION MUSICALE",
+        "EDUCATION PHYSIQUE ET SPORTIVE",
+        "FRANCAIS",
+        "MATHEMATIQUES",
+        "PHYSIQUE-CHIMIE",
+        "SCIENCES DE LA VIE ET DE LA TERRE",
+        "TECHNOLOGIE",
+        "VIE DE CLASSE",
+        "HISTOIRE-GEOGRAPHIE",
+        "ENSEIGNEMENT MORAL ET CIVIQUE"
+    ],
+    "classes": [
+        "3091$6A"
+    ],
+    "moduleName": "6EME",
+    "source": "AAF",
+    "scholarshipHolder": false,
+    "sector": "6EME",
+    "fieldOfStudy": [
+        "090100",
+        "030201",
+        "081300",
+        "100100",
+        "020700",
+        "061300",
+        "062300",
+        "062900",
+        "070800",
+        "008400",
+        "043700",
+        "043800"
+    ],
+    "ine": "110668877HC",
+    "level": "6EME",
+    "created": "2018-06-12T17:43:23.794+02:00",
+    "oldrelative": [
+        "8685849$10$1$1$0$0",
+        "8685850$20$0$1$0$0",
+        "8685849$1$1$1$1$0",
+        "8685850$1$1$1$1$0"
+    ],
+    "module": "10010012110",
+    "profiles": [
+        "Student"
+    ],
+    "structures": [
+        "3091"
+    ],
+    "groups": [
+        "3091$6A_GA"
+    ],
+    "externalId": "8621948",
+    "transport": false,
+    "joinKey": [
+        "8621948"
+    ],
+    "accommodation": "EXTERNE LIBRE",
+    "activationCode": "3575gbtf",
+    "status": "SCOLAIRE",
+    "relative": [
+        "8685849$10$1$1$0$0",
+        "8685850$20$0$1$0$0"
+    ],
+    "structureNodes": [
+        {
+            "area": "24774$77 BASSIN 4 (DIST. 11 ET 12)",
+            "zipCode": "77460",
+            "address": "39 RUE DE VARENNES",
+            "city": "SOUPPES SUR LOING",
+            "created": "2018-06-12T17:24:17.883+02:00",
+            "contract": "PU",
+            "externalId": "3091",
+            "source": "AAF",
+            "joinKey": [
+                "3091"
+            ],
+            "type": "COLLEGE",
+            "phone": "+33 1 64 29 84 33",
+            "checksum": "6e3f91f60b66c6bc0c14205cac71414bfe0f6cd0",
+            "name": "CLG-EMILE CHEVALLIER-ac-CRETEIL",
+            "modified": "2018-06-12T17:24:17.883+02:00",
+            "id": "87e2b8bb-71f2-4d3e-bc96-8eb1aeb8e8eb",
+            "UAI": "0770048J",
+            "academy": "CRETEIL",
+            "ministry": "MINISTERE DE L'EDUCATION NATIONALE",
+            "SIRET": "19770048700014"
+        }
+    ],
+    "functions": [
+        [
+            null,
+            null
+        ]
+    ],
+    "children": [
+        {
+            "displayName": null,
+            "externalId": null,
+            "id": null
+        }
+    ],
+    "parents": [
+        {
+            "displayName": "CONSTANTY Sylvie",
+            "externalId": "8685849",
+            "id": "fbbb5468-c988-4a13-ae16-1eaf41e9aef7"
+        },
+        {
+            "displayName": "MARTHELY Jean-Marc",
+            "externalId": "8685850",
+            "id": "9268aba9-bd26-45a8-a855-8deb821cc712"
+        }
+    ],
+    "functionalGroups": [
+        {
+            "name": "6A_GA",
+            "id": "75acd54d-9912-42b4-83c3-97cffbdbd893"
+        }
+    ],
+    "administrativeStructures": [
+        {
+            "id": "87e2b8bb-71f2-4d3e-bc96-8eb1aeb8e8eb"
+        }
+    ],
+    "manualGroups": [
+        {
+            "name": null,
+            "id": null
+        }
+    ]
+}
