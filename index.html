@@ -24,14 +24,17 @@
       <div class="main padding10">
         <div class="menu space-between">
           <div class="menu-left">
-            <i class="far fa-user"></i> <span>Utilisateurs</span>
+            <i class="far fa-user"></i> <span class="menu-left-title">Utilisateurs</span>
           </div>
           <div class="menu-right">
             Créer un utilisateur <i class="fas fa-user-plus"></i>
           </div>
         </div>
+        <div class="button darkgrey" id ="user-list">
+            <span class="centered">Afficher la liste des utilisateurs</span><i class="fas fa-users"></i>
+          </div>
         <div class="content space-between">
-          <aside class="sidebar shadowed-bg">
+          <aside class="sidebar shadowed-bg" id="sidebar">
             <div class="sidebar-search space-between">
               <div class="sidebar-search-input">
                 <input type="text" placeholder="Rechercher un utilisateur" /> <i class="fas fa-search"></i>
@@ -54,7 +57,7 @@
           </aside>
           <div class="person shadowed-bg" id="person">
             <div class="person-title space-between">
-              <span></span> <i class="fas fa-times"></i>
+              <span id="person-title"></span> <i class="fas fa-times"></i>
             </div>
             <div class="person-doublon">
               <span>Compte en doublon</span>
@@ -90,73 +93,77 @@
             </div>
             <div class="person-infos" id="person-infos">
               <div class="person-item-header">Connexion et infos ENT</div>
-              <div class="person-infos-content space-between padding10">
-                <div class="person-infos-content-left">
-                  <div class="person-infos-content-left-item">
-                    <span class="person-infos-content-left-item-title">
-                      Profil
-                    </span>
-                    <span class="person-infos-content-left-item-data" id="infos-profil"></span>
+              <div class="person-infos-content padding10">
+                <div class="person-infos-content-top space-between">
+                  <div class="person-infos-content-top-left">
+                    <div class="person-infos-content-top-left-item">
+                      <span class="person-infos-content-top-left-item-title">
+                        Profil
+                      </span>
+                      <span class="person-infos-content-top-left-item-data" id="infos-profil"></span>
+                    </div>
+                    <div class="person-infos-content-top-left-item margin-top10">
+                      <span class="person-infos-content-top-left-item-title">
+                        Login
+                      </span>
+                      <span class="person-infos-content-top-left-item-data" id="infos-login"></span>
+                    </div>
+                    <div class="person-infos-content-top-left-item margin-top10">
+                      <span class="person-infos-content-top-left-item-title">
+                        Code d'activation
+                      </span>
+                      <span class="person-infos-content-top-left-item-data" id="infos-code"></span>
+                    </div>
+                    <div class="person-infos-content-top-left-item margin-top10">
+                      <span class="person-infos-content-top-left-item-title">
+                        Identifiant
+                      </span>
+                      <span class="person-infos-content-top-left-item-data" id="infos-id"></span>
+                    </div>
+                    <div class="person-infos-content-top-left-item margin-top10">
+                      <span class="person-infos-content-top-left-item-title">
+                        Source
+                      </span>
+                      <span class="person-infos-content-top-left-item-data" id="infos-source"></span>
+                    </div>
+                    <div class="person-infos-content-top-left-item margin-top10">
+                      <span class="person-infos-content-top-left-item-title" id="infos-admin">
+                        Administration
+                      </span>
+                      <span class="person-infos-content-top-left-item-data"
+                        ></span
+                      >
+                    </div>
                   </div>
-                  <div class="person-infos-content-left-item margin-top10">
-                    <span class="person-infos-content-left-item-title">
-                      Login
-                    </span>
-                    <span class="person-infos-content-left-item-data" id="infos-login"></span>
+                  <div class="person-infos-content-top-right space-between">
+                    <div class="person-infos-content-top-right-top">
+                      <div class="button lightgrey margin-top5">
+                        <span class="centered">Modifier le profil</span>
+                      </div>
+                      <div class="button lightgrey margin-top5">
+                        <span class="centered">Changer le login</span>
+                      </div>
+                      <div class="button lightgrey margin-top5">
+                        <span class="centered">Changer le code d'activation</span>
+                      </div>
+                    </div>
+                    <div class="person-infos-content-top-right-bot">
+                      <div class="button lightgrey margin-top5">
+                        <span class="centered"
+                          >Retirer droit d'ADML pour cet établissement</span
+                        >
+                      </div>
+                    </div>
                   </div>
-                  <div class="person-infos-content-left-item margin-top10">
-                    <span class="person-infos-content-left-item-title">
-                      Code d'activation
-                    </span>
-                    <span class="person-infos-content-left-item-data" id="infos-code"></span>
-                  </div>
-                  <div class="person-infos-content-left-item margin-top10">
-                    <span class="person-infos-content-left-item-title">
-                      Identifiant
-                    </span>
-                    <span class="person-infos-content-left-item-data" id="infos-id"></span>
-                  </div>
-                  <div class="person-infos-content-left-item margin-top10">
-                    <span class="person-infos-content-left-item-title">
-                      Source
-                    </span>
-                    <span class="person-infos-content-left-item-data" id="infos-source"></span>
-                  </div>
-                  <div class="person-infos-content-left-item margin-top10">
-                    <span class="person-infos-content-left-item-title" id="infos-admin">
-                      Administration
-                    </span>
-                    <span class="person-infos-content-left-item-data"
-                      ></span
-                    >
-                  </div>
-                  <div class="button lightgrey margin-top15">
+                </div>
+                <div class="person-infos-content-bottom space-between margin-top15">
+                  <div class="button lightgrey">
                     <span
                       >Envoyer un mail de réinitialisation de mot de passe</span
                     >
                     <i class="fas fa-envelope"></i>
                   </div>
-                </div>
-                <div class="person-infos-content-right space-between">
-                  <div class="person-infos-content-right-top">
-                    <div class="button lightgrey margin-top5">
-                      <span class="centered">Modifier le profil</span>
-                    </div>
-                    <div class="button lightgrey margin-top5">
-                      <span class="centered">Changer le login</span>
-                    </div>
-                    <div class="button lightgrey margin-top5">
-                      <span class="centered">Changer le code d'activation</span>
-                    </div>
-                  </div>
-                  <div class="person-infos-content-right-bot">
-                    <div class="button lightgrey margin-top5">
-                      <span class="centered"
-                        >Retirer droit d'ADML pour cet établissement</span
-                      >
-                    </div>
-                    <input class="input-text margin-top5" type="text" />
-                  </div>
+                  <div><input class="input-text" type="text" /></div>
                 </div>
               </div>
             </div>

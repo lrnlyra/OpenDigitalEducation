@@ -1,3 +1,24 @@
+/* ********** EVENTS ********** */
+
+// Show side on click (mobile only)
+document.getElementById("user-list").addEventListener("click", function() {
+  if (document.querySelector("#sidebar").style.display == "none") {
+    document.querySelector("#sidebar").style.display = "block";
+    document.querySelector("#person").style.display = "none";
+    document.querySelector(
+      "#user-list"
+    ).innerHTML = `<span class="centered">Fermer la liste des utilisateurs</span><i class="fas fa-times">`;
+  } else {
+    document.querySelector("#sidebar").style.display = "none";
+    document.querySelector("#person").style.display = "block";
+    document.querySelector(
+      "#user-list"
+    ).innerHTML = `<span class="centered">Afficher la liste des utilisateurs</span><i class="fas fa-users"></i>`;
+  }
+});
+
+/* ********** DATA FROM JSON ********** */
+
 // Get data
 const usersList = require("./users-list.json");
 const user = require("./user.json");
@@ -19,7 +40,7 @@ document.querySelector("#sidebarItems").innerHTML = sidebarUsers.join("");
 
 // -- Connexion et infos ENT
 // Name
-document.querySelector("#person .person-title span").innerHTML =
+document.querySelector("#person-title").innerHTML =
   user.displayName + " - " + user.moduleName;
 // Profile
 const profile = user.profiles.map((profile, p) => {

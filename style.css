@@ -45,6 +45,11 @@ body {
   padding: 0.4rem;
   cursor: pointer;
 }
+@media only screen and (max-width: 480px) {
+  .button {
+    width: 100%;
+  }
+}
 .button span {
   font-size: 0.7rem;
   color: #fc6632;
@@ -78,6 +83,16 @@ body {
 .removable-item {
   width: 30%;
 }
+@media only screen and (max-width: 767px) {
+  .removable-item {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .removable-item {
+    width: 100%;
+  }
+}
 .removable-item span {
   font-size: 0.7rem;
 }
@@ -93,6 +108,11 @@ body {
   align-items: center;
   background-color: #22c8f6;
   padding: 0.2rem 1rem;
+}
+@media only screen and (max-width: 480px) {
+  .container .header {
+    flex-wrap: wrap;
+  }
 }
 .container .header i {
   font-size: 1.1rem;
@@ -119,10 +139,15 @@ body {
 .container .header-right i {
   padding: 0.3rem 0.4rem;
 }
+@media only screen and (max-width: 480px) {
+  .container .header-right {
+    margin-top: 0.5rem;
+  }
+}
 .container .main .menu {
   margin-bottom: 1rem;
 }
-.container .main .menu-left span {
+.container .main .menu-left-title {
   font-size: 1.1rem;
   color: #1f8db0;
   padding-left: 0.4rem;
@@ -147,11 +172,13 @@ body {
 .container .main .content .shadowed-bg {
   box-shadow: 0 0 3px 0 #777;
 }
-.container .main .content .sidebar {
-  width: 33%;
-}
 .container .main .content .person {
   width: 65%;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person {
+    width: 100%;
+  }
 }
 .container .main .content .person-title {
   align-items: center;
@@ -175,14 +202,40 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-doublon {
+    flex-wrap: wrap;
+  }
+}
 .container .main .content .person-doublon span {
   color: #fff;
   font-weight: bold;
   font-size: 0.8rem;
   width: 33%;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-doublon span {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-doublon span {
+    width: 100%;
+  }
+}
 .container .main .content .person-doublon-handle {
   width: 33%;
+}
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-doublon-handle {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-doublon-handle {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
 }
 .container .main .content .person-doublon-handle-button {
   background-color: #fff;
@@ -203,9 +256,24 @@ body {
   font-size: 0.6rem;
   color: #000;
 }
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-account {
+    flex-wrap: wrap;
+  }
+}
 .container .main .content .person-account-left {
   flex-direction: column;
   width: 25%;
+}
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-account-left {
+    width: 47%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-account-left {
+    width: 100%;
+  }
 }
 .container .main .content .person-account-left-image {
   background-color: #e6e6e6;
@@ -214,9 +282,24 @@ body {
   text-align: center;
   color: #b3b3b3;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-account-left-image {
+    font-size: 4rem;
+  }
+}
 .container .main .content .person-account-right {
   flex-direction: column;
   width: 73%;
+}
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-account-right {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-account-right {
+    width: 100%;
+  }
 }
 .container .main .content .person-account-right-button {
   align-items: center;
@@ -226,47 +309,161 @@ body {
   margin: 0.5rem 0;
   cursor: pointer;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-account-right-button {
+    padding: 0.7rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-account-right-button {
+    margin: 0.5rem 0 0 0;
+  }
+}
 .container .main .content .person-account-right-button:hover {
   background-color: #22c8f6;
 }
 .container .main .content .person-account-right-button span {
   font-weight: bold;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-account-right-button span {
+    font-size: 0.7rem;
+  }
+}
 .container .main .content .person-account-right-button i {
   font-size: 1.5rem;
   margin-left: 1rem;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-account-right-button i {
+    font-size: 0.9rem;
+  }
 }
 .container .main .content .person-item-header {
   background-color: #1aa5d1;
   padding: 0.5rem;
 }
-.container .main .content .person-infos-content-left {
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-infos-content-top {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.container .main .content .person-infos-content-top-left {
   width: 55%;
 }
-.container .main .content .person-infos-content-left-item {
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-infos-content-top-left {
+    width: 100%;
+  }
+}
+.container .main .content .person-infos-content-top-left-item {
   display: flex;
 }
-.container .main .content .person-infos-content-left-item span {
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-infos-content-top-left-item {
+    flex-wrap: wrap;
+  }
+}
+.container .main .content .person-infos-content-top-left-item span {
   font-size: 0.7rem;
 }
-.container .main .content .person-infos-content-left-item-title {
+.container .main .content .person-infos-content-top-left-item-title {
   width: 30%;
   padding-right: 1rem;
 }
-.container .main .content .person-infos-content-right {
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-infos-content-top-left-item-title {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-infos-content-top-left-item-title {
+    width: 100%;
+    font-weight: bold;
+  }
+}
+.container .main .content .person-infos-content-top-right {
   width: 42%;
   flex-direction: column;
 }
-.container .main .content .person-infos-content-right-top {
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-infos-content-top-right {
+    width: 100%;
+  }
+}
+.container .main .content .person-infos-content-top-right-top {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.container .main .content .person-infos-content-right-top .button {
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-infos-content-top-right-top {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+  }
+}
+.container .main .content .person-infos-content-top-right-top .button {
   width: 11rem;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-infos-content-top-right-top .button {
+    width: 100%;
+  }
+}
+.container .main .content .person-infos-content-top-right-bot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-infos-content-top-right-bot {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+  }
+}
+.container .main .content .person-infos-content-bottom {
+  align-items: center;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-infos-content-bottom {
+    flex-wrap: wrap;
+  }
+}
+.container .main .content .person-infos-content-bottom .button {
+  width: 55%;
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-infos-content-bottom .button {
+    margin: 0 0 0.5rem 0;
+    width: 100%;
+  }
+}
+.container .main .content .person-infos-content-bottom div {
+  width: 42%;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .content .person-infos-content-bottom div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-admin-content {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 .container .main .content .person-admin-content-left {
   width: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-admin-content-left {
+    width: 100%;
+  }
 }
 .container .main .content .person-admin-content-left-item {
   display: flex;
@@ -282,6 +479,17 @@ body {
 .container .main .content .person-admin-content-right {
   width: 40%;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-admin-content-right {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .container .main .content .person-admin-content-right .button {
+    width: 100%;
+  }
+}
 .container .main .content .person-resp .button, .container .main .content .person-fonc .button, .container .main .content .person-etab .button, .container .main .content .person-class .button, .container .main .content .person-group .button, .container .main .content .person-ent .button {
   margin-bottom: 1rem;
 }
@@ -289,12 +497,29 @@ body {
   margin-top: 0.5rem;
 }
 .container .main .sidebar {
+  width: 33%;
   height: 100%;
   padding-top: 1rem;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .sidebar {
+    display: none;
+    width: 100%;
+  }
 }
 .container .main .sidebar-search {
   padding-left: 1rem;
   align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .container .main .sidebar-search {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .sidebar-search {
+    padding-left: 0.5rem;
+  }
 }
 .container .main .sidebar-search-input {
   border-bottom: 1px solid #000;
@@ -305,17 +530,38 @@ body {
   width: 9rem;
   font-size: 0.7rem;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .sidebar-search-input input {
+    width: 80%;
+  }
+}
 .container .main .sidebar-search span {
   background-color: #1aa5d1;
   padding: 0.5rem 0.7rem;
   font-weight: bold;
   cursor: pointer;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .sidebar-search span {
+    margin-top: 0.5rem;
+  }
+}
 .container .main .sidebar-search span:hover {
   color: #fff;
 }
 .container .main .sidebar-filters {
   align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .container .main .sidebar-filters {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .sidebar-filters {
+    padding: 1rem 0;
+  }
 }
 .container .main .sidebar-filters i {
   margin-left: 0.5rem;
@@ -334,10 +580,26 @@ body {
 .container .main .sidebar-filters .button i {
   color: #fc6632;
 }
+@media only screen and (max-width: 767px) {
+  .container .main .sidebar-filters .button {
+    margin: 0.3rem 0 0 0.5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .main .sidebar-filters .button {
+    margin: 0.3rem 0.5rem 0 0.5rem;
+  }
+}
 .container .main .sidebar-items {
   overflow: scroll;
   height: 70vh;
   border-top: 1px solid #ccc;
+}
+@media only screen and (max-width: 480px) {
+  .container .main .sidebar-items {
+    overflow: visible;
+    height: 100%;
+  }
 }
 .container .main .sidebar-items-item {
   padding: 0.5rem 1rem;
@@ -355,6 +617,16 @@ body {
 }
 .container .main .sidebar-items-item span {
   font-size: 0.7rem;
+}
+
+#user-list {
+  margin-bottom: 1rem;
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  #user-list {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
