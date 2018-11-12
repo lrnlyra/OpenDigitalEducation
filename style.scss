@@ -113,9 +113,6 @@ body {
 // APP
 
 .container {
-  @media #{$tablet} {
-    background: red;
-  }
   // Header
   .header {
     align-items: center;
