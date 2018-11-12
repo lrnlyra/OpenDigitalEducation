@@ -4,6 +4,9 @@ $med-blue: #22c8f6;
 $dark-blue: #1aa5d1;
 $orange: #fc6632;
 
+// Font size
+$text-size: 0.8rem;
+
 // Media queries
 $tablet: "only screen and (max-width: 767px)";
 $phone: "only screen and (max-width: 480px)";
@@ -45,7 +48,7 @@ body {
 .input-text {
   border: 1px solid #000;
   width: 100%;
-  font-size: 0.7rem;
+  font-size: $text-size;
   padding: 0.2rem;
 }
 
@@ -63,7 +66,7 @@ body {
 
   // Text label
   span {
-    font-size: 0.7rem;
+    font-size: $text-size;
     color: $orange;
     padding-right: 0.5rem;
     &.centered {
@@ -107,7 +110,7 @@ body {
     width: 100%;
   }
   & span {
-    font-size: 0.7rem;
+    font-size: $text-size;
   }
   & i {
     padding-left: 1rem;
@@ -186,7 +189,7 @@ body {
       // Menu right content (button)
       &-right {
         background-color: $orange;
-        font-size: 0.7rem;
+        font-size: $text-size;
         padding: 0.4rem;
         cursor: pointer;
         border-radius: 4px;
@@ -197,7 +200,7 @@ body {
         // Menu right icon
         & i {
           padding-left: 0.3rem;
-          font-size: 0.7rem;
+          font-size: $text-size;
         }
       }
     }
@@ -281,7 +284,7 @@ body {
 
               // Doublon handle button text
               & span {
-                font-size: 0.7rem;
+                font-size: $text-size;
                 color: $orange;
                 padding-right: 0.5rem;
               }
@@ -357,7 +360,7 @@ body {
               & span {
                 font-weight: bold;
                 @media #{$tablet} {
-                  font-size: 0.7rem;
+                  font-size: $text-size;
                 }
               }
 
@@ -399,7 +402,7 @@ body {
                     flex-wrap: wrap;
                   }
                   & span {
-                    font-size: 0.7rem;
+                    font-size: $text-size;
                   }
                   &-title {
                     width: 30%;
@@ -434,7 +437,7 @@ body {
                     margin-top: 0.5rem;
                   }
                   & .button {
-                    width: 11rem;
+                    width: 12rem;
                     @media #{$phone} {
                       width: 100%;
                     }
@@ -497,7 +500,7 @@ body {
                 display: flex;
                 align-items: center;
                 & span {
-                  font-size: 0.7rem;
+                  font-size: $text-size;
                 }
                 &-title {
                   width: 40%;
@@ -566,7 +569,7 @@ body {
           & input {
             border: none;
             width: 9rem;
-            font-size: 0.7rem;
+            font-size: $text-size;
             @media #{$tablet} {
               width: 80%;
             }
@@ -647,7 +650,7 @@ body {
           }
           // Sidebar item text
           & span {
-            font-size: 0.7rem;
+            font-size: $text-size;
           }
         }
       }

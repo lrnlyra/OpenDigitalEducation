@@ -1,40 +1,25 @@
-/* ********** EVENTS ********** */
-
-// Show side on click (mobile only)
-document.getElementById("user-list").addEventListener("click", function() {
-  if (document.querySelector("#sidebar").style.display == "none") {
-    document.querySelector("#sidebar").style.display = "block";
-    document.querySelector("#person").style.display = "none";
-    document.querySelector(
-      "#user-list"
-    ).innerHTML = `<span class="centered">Fermer la liste des utilisateurs</span><i class="fas fa-times">`;
-  } else {
-    document.querySelector("#sidebar").style.display = "none";
-    document.querySelector("#person").style.display = "block";
-    document.querySelector(
-      "#user-list"
-    ).innerHTML = `<span class="centered">Afficher la liste des utilisateurs</span><i class="fas fa-users"></i>`;
-  }
-});
-
-/* ********** DATA FROM JSON ********** */
-
 // Get data
 const usersList = require("./users-list.json");
 const user = require("./user.json");
+let sortedAtoZ;
+
+/* ********** DATA FROM JSON ********** */
 
 /* ------ USER LIST ------ */
 
 // Map user list
-const sidebarUsers = usersList.users.map((user, u) => {
-  return `
-    <div class="sidebar-items-item space-between">
-        <span>${user.displayName}</span>
-    </div>
-    `;
-});
-// Display user list on sidebar
-document.querySelector("#sidebarItems").innerHTML = sidebarUsers.join("");
+const mapUsersList = usersList => {
+  const sidebarUsers = usersList.users.map((user, u) => {
+    return `
+      <div class="sidebar-items-item space-between">
+          <span>${user.displayName}</span>
+      </div>
+      `;
+  });
+  // Display user list on sidebar
+  document.querySelector("#sidebarItems").innerHTML = sidebarUsers.join("");
+};
+mapUsersList(usersList);
 
 /* ------ CURRENT USER ------ */
 
@@ -134,3 +119,53 @@ document.querySelector("#group-items").innerHTML = functionalGroups.join("");
 
 // -- ENT
 // Je n'ai pas trouvé ENT dans le json
+
+/* ********** EVENTS ********** */
+
+// Show sidebar on click (mobile only)
+document.getElementById("user-list").addEventListener("click", function() {
+  if (document.querySelector("#sidebar").style.display == "none") {
+    document.querySelector("#sidebar").style.display = "block";
+    document.querySelector("#person").style.display = "none";
+    document.querySelector(
+      "#user-list"
+    ).innerHTML = `<span class="centered">Fermer la liste des utilisateurs</span><i class="fas fa-times">`;
+  } else {
+    document.querySelector("#sidebar").style.display = "none";
+    document.querySelector("#person").style.display = "block";
+    document.querySelector(
+      "#user-list"
+    ).innerHTML = `<span class="centered">Afficher la liste des utilisateurs</span><i class="fas fa-users"></i>`;
+  }
+});
+
+// Sort user list
+document.getElementById("sort-alpha").addEventListener("click", function() {
+  // Check if users are currently sorted AtoZ ou ZtoA
+  if (sortedAtoZ == false) {
+    // Sort A to Z
+    usersList.users.sort(function(a, b) {
+      if (a.lastName < b.lastName) {
+        return -1;
+      }
+      if (a.lastName > b.lastName) {
+        return 1;
+      }
+      sortedAtoZ = true;
+      return 0;
+    });
+  } else {
+    // Sort Z to A
+    usersList.users.sort(function(a, b) {
+      if (a.lastName < b.lastName) {
+        return 1;
+      }
+      if (a.lastName > b.lastName) {
+        return -1;
+      }
+      sortedAtoZ = false;
+      return 0;
+    });
+  }
+  mapUsersList(usersList);
+});
